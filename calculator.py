@@ -69,7 +69,10 @@ class Calculator(ctk.CTk):
         elif operation == "X^2":
             self.form = str((eval(self.form)) ** 2)
         elif operation == "=":
-            self.form = str(eval(self.form))
+            try:
+                self.form = str(eval(self.form))
+            except ZeroDivisionError:
+                self.form = "Error!"
         else:
             if self.form == "0":
                 self.form = ""
