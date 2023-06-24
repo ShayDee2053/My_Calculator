@@ -10,6 +10,7 @@ class Calculator(ctk.CTk):
         color = "yellow"
 
         ctk.set_appearance_mode("dark")
+        self.title("Calculator")
         self.geometry("485x530+650+167")
         self.resizable(width=False, height=False)
 
